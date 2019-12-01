@@ -1,14 +1,12 @@
 {% extends "templates/base.html" %}
 {% block content %}
-  <div class="jumbotron">
+  <div class="jumbotron" style="text-align:center">
     <h1>Welcome to expensive</h1>
-    <p>Time to start building your site!</p>
-    <p><a class="btn btn-primary btn-lg" href="http://luminusweb.net">Learn more &raquo;</a></p>
-  </div>
-
-  <div class="row-fluid">
-    <div class="span9">
-    {{content|safe}}
-    </div>
+    <p>Helping you see what is <strong>expensive</strong> in your life!</p>
+    <p>
+      <a class="btn btn-success btn-lg" href="{{servlet-context}}/signup">Sign up</a>
+      or
+      <a class="btn btn-success btn-lg" href="{{servlet-context}}/login">Login</a>
+    </p>
   </div>
 {% endblock %}
