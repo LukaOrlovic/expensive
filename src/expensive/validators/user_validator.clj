@@ -22,13 +22,13 @@
 (def password-validator
   (validation-set
     (length-of :password
-               :within (range 8 101)
+               :within (range 8 16)
                :blank-message "is a required field."
                :message-fn
                (fn [type m attribute & args]
                  (if (= type :blank)
                    "is a required field."
-                   "Password must be between 8 and 100 characters long.")))))
+                   "Password must be between 8 and 15 characters long.")))))
 
 (defn validate-signup
   [signup]
