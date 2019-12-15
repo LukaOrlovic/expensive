@@ -20,7 +20,16 @@
   :plugins [[lein-ring "0.12.5"]
             [lein-environ "1.0.0"]
             [lein-ancient "0.5.5"]
-            [quickie "0.3.6"]]
+            [quickie "0.3.6"]
+            [migratus-lein "0.1.0"]]
+  :migratus {:store         :database
+             :migration-dir "migrations"
+             :migration-table-name "_migrations"
+             :db            {:classname "org.postgresql.Driver"
+                             :subprotocol "postgresql"
+                             :subname "//localhost/postgres"
+                             :user "expensive"
+                             :password "expensive"}}
   :ring {:handler expensive.handler/app
          :init    expensive.handler/init
          :destroy expensive.handler/destroy}
@@ -33,7 +42,9 @@
                        :auto-reload?  false}}
    :dev {:dependencies [[ring-mock "0.1.5"]
                         [ring/ring-devel "1.3.1"]
-                        [pjstadig/humane-test-output "0.6.0"]]
+                        [pjstadig/humane-test-output "0.6.0"]
+                        [postgresql/postgresql "9.3-1102.jdbc41"]
+                        [migratus "0.7.0"]]
          :injections [(require 'pjstadig.humane-test-output)
                       (pjstadig.humane-test-output/activate!)]
          :env {:dev true}}}
