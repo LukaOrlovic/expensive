@@ -1,6 +1,7 @@
 (ns expensive.handler
   (:require [compojure.core :refer [defroutes]]
             [expensive.routes.home :refer [home-routes]]
+            [expensive.routes.test-routes :refer [test-routes]]
             [expensive.middleware :refer [load-middleware]]
             [expensive.session-manager :as session-manager]
             [noir.response :refer [redirect]]
@@ -11,11 +12,30 @@
             [taoensso.timbre.appenders.rotor :as rotor]
             [selmer.parser :as parser]
             [environ.core :refer [env]]
-            [cronj.core :as cronj]))
+            [cronj.core :as cronj]
+            [migratus.core :as migratus]))
 
 (defroutes base-routes
   (route/resources "/")
   (route/not-found "Not Found"))
+
+(def migratus-config
+  {:store         :database
+   :migration-dir "migrations"
+   :migration-table-name "_migrations"
+   :db            {:classname "org.postgresql.Driver"
+                   :subprotocol "postgresql"
+                   :subname "//localhost/postgres"
+                   :user "expensive"
+                   :password "expensive"}})
+
+(defn migrate-db []
+  (timbre/info "checking migrations")
+  (try
+    (migratus/migrate migratus-config)
+    (catch Exception e
+      (timbre/error "Failed to migrate" e)))
+  (timbre/info "finished migrations"))
 
 (defn init
   "init will be called once when
@@ -37,6 +57,7 @@
 
   (if (env :dev) (parser/cache-off!))
   ;;start the expired session cleanup job
+  (migrate-db)
   (cronj/start! session-manager/cleanup-job)
   (timbre/info "\n-=[ expensive started successfully"
                (when (env :dev) "using the development profile") "]=-"))

@@ -3,7 +3,8 @@
             [expensive.layout :as layout]
             [expensive.util :as util]
             [ring.util.response :as response]
-            [expensive.validators.user-validator :as v]))
+            [expensive.validators.user-validator :as v]
+            [expensive.models.user-model :as user_model]))
 
 (defn home-page
   []
@@ -18,7 +19,9 @@
   [user]
   (let [errors (v/validate-signup user)]
       (if (empty? errors)
-        (response/redirect "/signup-success")
+        (do
+          (user_model/add-user! user)
+          (response/redirect "/signup-success"))
         (layout/render "signup.html" (assoc user :errors errors)))))
 
 (defn about-page

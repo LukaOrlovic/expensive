@@ -13,7 +13,9 @@
                  [im.chit/cronj "1.4.2"]
                  [noir-exception "0.2.2"]
                  [prone "0.6.0"]
-                 [com.novemberain/validateur "2.5.0"]]
+                 [com.novemberain/validateur "2.5.0"]
+                 [yesql "0.5.3"]
+                 [crypto-password "0.2.0"]]
 
   :repl-options {:init-ns expensive.repl}
   :jvm-opts ["-server"]

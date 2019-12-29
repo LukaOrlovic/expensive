@@ -34,6 +34,7 @@
     <orderEntry type="library" name="Leiningen: com.google.protobuf/protobuf-java:2.4.1" level="project" />
     <orderEntry type="library" name="Leiningen: com.googlecode.json-simple/json-simple:1.1.1" level="project" />
     <orderEntry type="library" name="Leiningen: com.ibm.icu/icu4j:53.1" level="project" />
+    <orderEntry type="library" name="Leiningen: com.lambdaworks/scrypt:1.4.0" level="project" />
     <orderEntry type="library" name="Leiningen: com.novemberain/validateur:2.5.0" level="project" />
     <orderEntry type="library" name="Leiningen: com.taoensso/encore:1.8.1" level="project" />
     <orderEntry type="library" name="Leiningen: com.taoensso/timbre:3.3.1" level="project" />
@@ -43,6 +44,7 @@
     <orderEntry type="library" name="Leiningen: commons-io:2.4" level="project" />
     <orderEntry type="library" name="Leiningen: compojure:1.1.9" level="project" />
     <orderEntry type="library" name="Leiningen: crypto-equality:1.0.0" level="project" />
+    <orderEntry type="library" name="Leiningen: crypto-password:0.2.0" level="project" />
     <orderEntry type="library" name="Leiningen: crypto-random:1.2.0" level="project" />
     <orderEntry type="library" name="Leiningen: environ:1.0.0" level="project" />
     <orderEntry type="library" name="Leiningen: hiccup:1.0.5" level="project" />
@@ -62,6 +64,7 @@
     <orderEntry type="library" name="Leiningen: im.chit/hara.ova:2.1.3" level="project" />
     <orderEntry type="library" name="Leiningen: im.chit/hara.protocol.state:2.1.3" level="project" />
     <orderEntry type="library" name="Leiningen: im.chit/hara.protocol.watch:2.1.3" level="project" />
+    <orderEntry type="library" name="Leiningen: instaparse:1.4.1" level="project" />
     <orderEntry type="library" name="Leiningen: io.aviso/pretty:0.1.12" level="project" />
     <orderEntry type="library" name="Leiningen: javax.servlet/servlet-api:2.5" level="project" />
     <orderEntry type="library" name="Leiningen: joda-time:2.4" level="project" />
@@ -83,7 +86,7 @@
     <orderEntry type="library" name="Leiningen: org.clojure/google-closure-library-third-party:0.0-20130212-95c19e7f0f5f" level="project" />
     <orderEntry type="library" name="Leiningen: org.clojure/google-closure-library:0.0-20130212-95c19e7f0f5f" level="project" />
     <orderEntry type="library" name="Leiningen: org.clojure/java.classpath:0.1.0" level="project" />
-    <orderEntry type="library" name="Leiningen: org.clojure/java.jdbc:0.3.0" level="project" />
+    <orderEntry type="library" name="Leiningen: org.clojure/java.jdbc:0.5.8" level="project" />
     <orderEntry type="library" name="Leiningen: org.clojure/tools.logging:0.3.0" level="project" />
     <orderEntry type="library" name="Leiningen: org.clojure/tools.macro:0.1.0" level="project" />
     <orderEntry type="library" name="Leiningen: org.clojure/tools.namespace:0.2.4" level="project" />
@@ -122,5 +125,6 @@
     <orderEntry type="library" name="Leiningen: selmer:0.7.2" level="project" />
     <orderEntry type="library" name="Leiningen: tigris:0.1.1" level="project" />
     <orderEntry type="library" name="Leiningen: watchtower:0.1.1" level="project" />
+    <orderEntry type="library" name="Leiningen: yesql:0.5.3" level="project" />
   </component>
 </module>
