@@ -1,12 +1,7 @@
 (ns expensive.models.user-model
   (:require [yesql.core :refer [defqueries]]
-            [crypto.password.bcrypt :as password]))
-
-(def db-spec {:classname "org.postgresql.Driver"
-              :subprotocol "postgresql"
-              :subname "//localhost/postgres"
-              :user "expensive"
-              :password "expensive"})
+            [crypto.password.bcrypt :as password]
+            [expensive.models.connection :refer [db-spec]]))
 
 (defqueries "expensive/models/users.sql"
             {:connection db-spec})

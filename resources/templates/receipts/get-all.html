@@ -1,0 +1,13 @@
+{% extends "templates/base.html" %}
+{% block content %}
+<h1>All receipts:</h1>
+{% for r in receipts %}
+<li>
+    <div><a href="/receipts/{{r.receiptid}}"></a></div>
+    <div>{{ r.amount }}</div>
+    <div>{{ r.date }}</div>
+    <div>{{ r.account_number }}</div>
+    <div>{{ r.statementid }}</div>
+</li>
+{% endfor %}
+{% endblock %}

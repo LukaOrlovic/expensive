@@ -4,7 +4,8 @@
             [expensive.util :as util]
             [ring.util.response :as response]
             [expensive.validators.user-validator :as v]
-            [expensive.models.user-model :as user_model]))
+            [expensive.models.user-model :as user_model]
+            [expensive.models.receipt-model :as receipt]))
 
 (defn home-page
   []
@@ -32,10 +33,15 @@
   []
   (layout/render "plot.html"))
 
+(defn receipts-get-all
+  []
+  (layout/render "receipts/get-all.html" {:receipts (receipt/get-all)}))
+
 (defroutes home-routes
   (GET "/" [] (home-page))
   (GET "/about" [] (about-page))
   (GET "/signup" [] (signup-page))
   (POST "/signup" [& form] (signup-page-submit form))
   (GET "/signup-success" [] "Success!")
-  (GET "/plot" [] (plot-something)))
+  (GET "/plot" [] (plot-something))
+  (GET "/receipt/get-all" [] (receipts-get-all)))

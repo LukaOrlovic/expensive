@@ -1,7 +1,6 @@
 (ns expensive.handler
   (:require [compojure.core :refer [defroutes]]
             [expensive.routes.home :refer [home-routes]]
-            [expensive.routes.test-routes :refer [test-routes]]
             [expensive.middleware :refer [load-middleware]]
             [expensive.session-manager :as session-manager]
             [noir.response :refer [redirect]]
