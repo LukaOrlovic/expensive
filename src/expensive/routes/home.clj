@@ -28,9 +28,14 @@
   []
   (layout/render "about.html"))
 
+(defn plot-something
+  []
+  (layout/render "plot.html"))
+
 (defroutes home-routes
   (GET "/" [] (home-page))
   (GET "/about" [] (about-page))
   (GET "/signup" [] (signup-page))
   (POST "/signup" [& form] (signup-page-submit form))
-  (GET "/signup-success" [] "Success!"))
+  (GET "/signup-success" [] "Success!")
+  (GET "/plot" [] (plot-something)))
