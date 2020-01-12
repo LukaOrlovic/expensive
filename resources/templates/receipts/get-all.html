@@ -1,13 +1,24 @@
 {% extends "templates/base.html" %}
 {% block content %}
-<h1>All receipts:</h1>
-{% for r in receipts %}
-<li>
-    <div><a href="/receipts/{{r.receiptid}}"></a></div>
-    <div>{{ r.amount }}</div>
-    <div>{{ r.date }}</div>
-    <div>{{ r.account_number }}</div>
-    <div>{{ r.statementid }}</div>
-</li>
-{% endfor %}
+<h1 style="margin-left:40%;">All receipts:</h1>
+<table>
+    <thead>
+    <tr>
+        <th>Receipt ID</th>
+        <th>Amount</th>
+        <th>Date</th>
+        <th>Account number</th>
+    </tr>
+    </thead>
+    <tbody>
+    {% for r in receipts %}
+    <tr>
+        <td><a href="">{{r.receiptid}}</a></td>
+        <td><strong>{{ r.amount }}</strong></td>
+        <td>{{ r.date }}</td>
+        <td>{{ r.account_number }}</td>
+    </tr>
+    {% endfor %}
+    </tbody>
+</table>
 {% endblock %}

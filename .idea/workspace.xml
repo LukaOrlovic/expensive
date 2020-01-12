@@ -2,14 +2,10 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="7029480f-9ccc-447c-aa83-3ac9e556a55b" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/resources/templates/receipts/get-all.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/expensive/models/connection.clj" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/expensive/models/receipt.sql" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/expensive/models/receipt_model.clj" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/expensive/handler.clj" beforeDir="false" afterPath="$PROJECT_DIR$/src/expensive/handler.clj" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/expensive/models/user_model.clj" beforeDir="false" afterPath="$PROJECT_DIR$/src/expensive/models/user_model.clj" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/expensive/routes/home.clj" beforeDir="false" afterPath="$PROJECT_DIR$/src/expensive/routes/home.clj" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/public/css/screen.css" beforeDir="false" afterPath="$PROJECT_DIR$/resources/public/css/screen.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/templates/base.html" beforeDir="false" afterPath="$PROJECT_DIR$/resources/templates/base.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/templates/receipts/get-all.html" beforeDir="false" afterPath="$PROJECT_DIR$/resources/templates/receipts/get-all.html" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/classes/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -23,11 +19,20 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/expensive/routes/home.clj">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="452">
+            <state relative-caret-position="1104">
               <caret line="46" column="2" selection-start-line="46" selection-start-column="2" selection-end-line="46" selection-end-column="2" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/resources/public/css/screen.css">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="283">
+              <caret line="131" column="18" selection-start-line="131" selection-start-column="18" selection-end-line="131" selection-end-column="18" />
             </state>
           </provider>
         </entry>
@@ -35,8 +40,36 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/expensive/handler.clj">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-1586">
+            <state relative-caret-position="72">
               <caret line="3" selection-start-line="3" selection-end-line="3" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/resources/templates/receipts/get-all.html">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="360">
+              <caret line="15" column="47" lean-forward="true" selection-start-line="15" selection-start-column="47" selection-end-line="15" selection-end-column="47" />
+              <folding>
+                <element signature="n#style#0;n#h1#0;n#!!top" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/resources/templates/base.html">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="504">
+              <caret line="21" column="32" selection-start-line="21" selection-start-column="32" selection-end-line="21" selection-end-column="32" />
+              <folding>
+                <element signature="n#style#0;n#a#0;n#div#0;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#a#0;n#li#0;n#ul#0;n#div#1;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#a#0;n#li#1;n#ul#0;n#div#1;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#a#0;n#li#2;n#ul#0;n#div#1;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#a#0;n#li#3;n#ul#0;n#div#1;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -73,6 +106,8 @@
       <find>selected</find>
       <find>have</find>
       <find>receipt-routes</find>
+      <find>text-shadow: 0 0 3px #aaa;</find>
+      <find>color: transparent;</find>
     </findStrings>
   </component>
   <component name="Git.Settings">
@@ -104,8 +139,6 @@
         <option value="$PROJECT_DIR$/src/migrations/00000000000500-statement.up.sql" />
         <option value="$PROJECT_DIR$/src/migrations/00000000000500-statement.down.sql" />
         <option value="$PROJECT_DIR$/project.clj" />
-        <option value="$PROJECT_DIR$/resources/public/css/screen.css" />
-        <option value="$PROJECT_DIR$/resources/templates/base.html" />
         <option value="$PROJECT_DIR$/resources/public/js/utility.js" />
         <option value="$PROJECT_DIR$/resources/templates/plot.html" />
         <option value="$PROJECT_DIR$/src/migrations/00000000000310-account.up.sql" />
@@ -118,12 +151,14 @@
         <option value="$PROJECT_DIR$/src/expensive/routes/receipt.clj" />
         <option value="$PROJECT_DIR$/resources/templates/receipts.html" />
         <option value="$PROJECT_DIR$/src/expensive/handler.clj" />
-        <option value="$PROJECT_DIR$/resources/templates/receipts/get-all.html" />
         <option value="$PROJECT_DIR$/src/expensive/routes/home.clj" />
+        <option value="$PROJECT_DIR$/resources/templates/base.html" />
+        <option value="$PROJECT_DIR$/resources/templates/receipts/get-all.html" />
+        <option value="$PROJECT_DIR$/resources/public/css/screen.css" />
       </list>
     </option>
   </component>
-  <component name="ProjectFrameBounds" extendedState="6">
+  <component name="ProjectFrameBounds" extendedState="7">
     <option name="x" value="-7" />
     <option name="width" value="697" />
     <option name="height" value="745" />
@@ -134,7 +169,6 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="Scope" />
       <pane id="PackagesPane" />
       <pane id="ProjectPane">
         <subPane>
@@ -152,7 +186,27 @@
               <item name="expensive" type="b2602c69:ProjectViewProjectNode" />
               <item name="expensive" type="462c0819:PsiDirectoryNode" />
               <item name="resources" type="462c0819:PsiDirectoryNode" />
+              <item name="public" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="expensive" type="b2602c69:ProjectViewProjectNode" />
+              <item name="expensive" type="462c0819:PsiDirectoryNode" />
+              <item name="resources" type="462c0819:PsiDirectoryNode" />
+              <item name="public" type="462c0819:PsiDirectoryNode" />
+              <item name="css" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="expensive" type="b2602c69:ProjectViewProjectNode" />
+              <item name="expensive" type="462c0819:PsiDirectoryNode" />
+              <item name="resources" type="462c0819:PsiDirectoryNode" />
               <item name="templates" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="expensive" type="b2602c69:ProjectViewProjectNode" />
+              <item name="expensive" type="462c0819:PsiDirectoryNode" />
+              <item name="resources" type="462c0819:PsiDirectoryNode" />
+              <item name="templates" type="462c0819:PsiDirectoryNode" />
+              <item name="receipts" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="expensive" type="b2602c69:ProjectViewProjectNode" />
@@ -169,6 +223,7 @@
           <select />
         </subPane>
       </pane>
+      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -234,7 +289,7 @@
     <frame x="-8" y="-8" width="1382" height="754" extended-state="6" />
     <editor active="true" />
     <layout>
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.15960665" />
+      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.16641453" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Designer" order="2" />
       <window_info id="UI Designer" order="3" />
@@ -248,7 +303,7 @@
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
       <window_info anchor="bottom" id="TODO" order="6" />
       <window_info anchor="bottom" id="Version Control" order="7" />
-      <window_info anchor="bottom" id="Terminal" order="8" sideWeight="0.49546143" weight="0.30595812" />
+      <window_info active="true" anchor="bottom" id="Terminal" order="8" sideWeight="0.49546143" visible="true" weight="0.30595812" />
       <window_info anchor="bottom" id="Event Log" order="9" sideWeight="0.5045386" side_tool="true" weight="0.30595812" />
       <window_info anchor="bottom" id="DB Execution Console" order="10" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
@@ -433,13 +488,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/resources/public/css/screen.css">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="312">
-          <caret line="13" column="18" selection-start-line="13" selection-start-column="18" selection-end-line="13" selection-end-column="18" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/resources/templates/home.html">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="240">
@@ -529,13 +577,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/expensive/models/receipt.sql">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="168">
-          <caret line="7" column="6" selection-start-line="7" selection-start-column="6" selection-end-line="7" selection-end-column="6" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/expensive/routes/test_routes.clj">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="120">
@@ -557,13 +598,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/resources/templates/base.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="168">
-          <caret line="7" column="31" selection-start-line="7" selection-start-column="31" selection-end-line="7" selection-end-column="31" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/resources/templates/about.html">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="24">
@@ -571,31 +605,56 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/resources/templates/receipts.html">
+    <entry file="file://$PROJECT_DIR$/resources/templates/receipts.html" />
+    <entry file="file://$PROJECT_DIR$/src/expensive/routes/home.clj">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="216">
-          <caret line="9" column="29" selection-end-line="13" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/resources/templates/receipts/get-all.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="312">
-          <caret line="13" selection-start-line="13" selection-end-line="13" />
+        <state relative-caret-position="1104">
+          <caret line="46" column="2" selection-start-line="46" selection-start-column="2" selection-end-line="46" selection-end-column="2" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/expensive/handler.clj">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-1586">
+        <state relative-caret-position="72">
           <caret line="3" selection-start-line="3" selection-end-line="3" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/expensive/routes/home.clj">
+    <entry file="file://$PROJECT_DIR$/resources/templates/base.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="452">
-          <caret line="46" column="2" selection-start-line="46" selection-start-column="2" selection-end-line="46" selection-end-column="2" />
+        <state relative-caret-position="504">
+          <caret line="21" column="32" selection-start-line="21" selection-start-column="32" selection-end-line="21" selection-end-column="32" />
+          <folding>
+            <element signature="n#style#0;n#a#0;n#div#0;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#a#0;n#li#0;n#ul#0;n#div#1;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#a#0;n#li#1;n#ul#0;n#div#1;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#a#0;n#li#2;n#ul#0;n#div#1;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#a#0;n#li#3;n#ul#0;n#div#1;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/expensive/models/receipt.sql">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="168">
+          <caret line="7" column="6" selection-start-line="7" selection-start-column="6" selection-end-line="7" selection-end-column="6" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/resources/templates/receipts/get-all.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="360">
+          <caret line="15" column="47" lean-forward="true" selection-start-line="15" selection-start-column="47" selection-end-line="15" selection-end-column="47" />
+          <folding>
+            <element signature="n#style#0;n#h1#0;n#!!top" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/resources/public/css/screen.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="283">
+          <caret line="131" column="18" selection-start-line="131" selection-start-column="18" selection-end-line="131" selection-end-column="18" />
         </state>
       </provider>
     </entry>
