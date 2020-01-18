@@ -12,7 +12,8 @@
             [selmer.parser :as parser]
             [environ.core :refer [env]]
             [cronj.core :as cronj]
-            [migratus.core :as migratus]))
+            [migratus.core :as migratus]
+            [expensive.routes.receipt :refer [receipt-routes]]))
 
 (defroutes base-routes
   (route/resources "/")
@@ -83,7 +84,7 @@
 
 (def app (app-handler
            ;; add your application routes here
-           [home-routes base-routes]
+           [home-routes receipt-routes base-routes]
            ;; add custom middleware here
            :middleware (load-middleware)
            :ring-defaults (mk-defaults false)

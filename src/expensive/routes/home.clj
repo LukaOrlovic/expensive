@@ -33,15 +33,10 @@
   []
   (layout/render "plot.html"))
 
-(defn receipts-get-all
-  []
-  (layout/render "receipts/get-all.html" {:receipts (receipt/get-all)}))
-
 (defroutes home-routes
   (GET "/" [] (home-page))
   (GET "/about" [] (about-page))
   (GET "/signup" [] (signup-page))
   (POST "/signup" [& form] (signup-page-submit form))
   (GET "/signup-success" [] "Success!")
-  (GET "/plot" [] (plot-something))
-  (GET "/receipt/get-all" [] (receipts-get-all)))
+  (GET "/plot" [] (plot-something)))

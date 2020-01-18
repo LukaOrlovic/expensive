@@ -1,6 +1,6 @@
 --name: insert_receipt<!
-INSERT INTO receipt (username, email, password)
-VALUES (:username, :email, :password);
+INSERT INTO receipt (amount, date, account_number)
+VALUES (:amount, :date, :account_number);
 
 --name: get-all
 SELECT *
