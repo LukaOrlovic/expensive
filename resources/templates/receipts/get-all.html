@@ -8,15 +8,17 @@
         <th>Amount</th>
         <th>Date</th>
         <th>Account number</th>
+        <th>Action</th>
     </tr>
     </thead>
     <tbody>
     {% for r in receipts %}
     <tr>
-        <td><a href="">{{r.receiptid}}</a></td>
+        <td><a href="/receipt/get/{{r.receiptid}}">{{r.receiptid}}</a></td>
         <td><strong>{{ r.amount }}</strong></td>
         <td>{{ r.date }}</td>
         <td>{{ r.account_number }}</td>
+        <td><a href="/receipt/delete/{{r.receiptid}}"><div>DELETE</div></a></td>
     </tr>
     {% endfor %}
     </tbody>

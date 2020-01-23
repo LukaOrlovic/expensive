@@ -34,3 +34,13 @@
         (insert_receipt<! (prepare-receipt-data-for-db receipt))
         (response/redirect "/receipt/get-all"))
       (layout/render "signup.html" (assoc receipt :errors errors)))))
+
+(defn show-id
+  [receiptid]
+  (println receiptid)
+  (layout/render "about.html"))
+
+(defn delete
+  [receiptid]
+  (delete! {:receiptid (Double/parseDouble receiptid)})
+  (receipts-get-all))

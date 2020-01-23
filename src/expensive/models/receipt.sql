@@ -6,3 +6,6 @@ VALUES (:amount, :date, :account_number);
 SELECT *
 FROM receipt
 ORDER BY date ASC;
+
+--name: delete!
+DELETE FROM receipt WHERE receiptid = :receiptid;
