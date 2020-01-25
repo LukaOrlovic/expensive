@@ -136,3 +136,7 @@ tbody:hover tr:hover a {
 table, th, td {
   border: 1px inset black;
 }
+
+td, th{
+    text-align: center;
+}
