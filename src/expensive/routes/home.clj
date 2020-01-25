@@ -5,7 +5,8 @@
             [ring.util.response :as response]
             [expensive.validators.user-validator :as v]
             [expensive.models.user-model :as user_model]
-            [expensive.models.receipt-model :as receipt]))
+            [expensive.models.receipt-model :as receipt]
+            [noir.cookies :as cookies]))
 
 (defn home-page
   []
@@ -31,6 +32,11 @@
 
 (defn plot-something
   []
+  (cookies/put! "January" 100000)
+  (cookies/put! "February" 250000)
+  (cookies/put! "March" 88000)
+  (cookies/put! "April" 92300)
+  (cookies/put! "May" 158000)
   (layout/render "plot.html"))
 
 (defroutes home-routes

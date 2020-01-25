@@ -55,7 +55,6 @@
 
 (defn update
   [receipt]
-  (prepare-receipt-data-for-db receipt)
   (let [errors (r/validate-receipt receipt)]
     (if (empty? errors)
       (do

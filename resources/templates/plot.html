@@ -3,8 +3,15 @@
     <div id="tester" style="width:1100px;height:450px;"></div>
     <script>
 	TESTER = document.getElementById('tester');
+	var cookies = document.cookie;
+	console.log(cookies);
+	var a = getCookie('January');
+	var b = getCookie('February');
+	var c = getCookie('March');
+	var d = getCookie('April');
+	var e = getCookie('May');
 	Plotly.plot( TESTER, [{
 	x: ['January', 'February', 'March', 'April', 'May'],
-	y: [100000, 250000, 380000, 275000, 550000] }], layout );
+	y: [a, b, c, d, e] }], layout );
     </script>
 {% endblock %}
