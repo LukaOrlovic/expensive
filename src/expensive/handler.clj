@@ -13,7 +13,8 @@
             [environ.core :refer [env]]
             [cronj.core :as cronj]
             [migratus.core :as migratus]
-            [expensive.routes.receipt :refer [receipt-routes]]))
+            [expensive.routes.receipt :refer [receipt-routes]]
+            [expensive.routes.access :as access]))
 
 (defroutes base-routes
   (route/resources "/")
@@ -89,7 +90,7 @@
            :middleware (load-middleware)
            :ring-defaults (mk-defaults false)
            ;; add access rules here
-           :access-rules []
+           :access-rules access/rules
            ;; serialize/deserialize the following data formats
            ;; available formats:
            ;; :json :json-kw :yaml :yaml-kw :edn :yaml-in-html

@@ -26,6 +26,15 @@
           (response/redirect "/signup-success"))
         (layout/render "signup.html" (assoc user :errors errors)))))
 
+(defn login-page
+  ([]
+   (layout/render "login.html" {:username "Name"}))
+  ([credentials]
+   (if (apply user_model/auth-user (map credentials [:username :password]))
+     (receipt/receipts-get-all)
+     (layout/render "login.html" {:invalid-credentials? true}))))
+
+
 (defn about-page
   []
   (layout/render "about.html"))
@@ -45,4 +54,6 @@
   (GET "/signup" [] (signup-page))
   (POST "/signup" [& form] (signup-page-submit form))
   (GET "/signup-success" [] "Success!")
-  (GET "/plot" [] (plot-something)))
+  (GET "/plot" [] (plot-something))
+  (GET "/login" [] (login-page))
+  (POST "/login" [& login-form] (login-page login-form)))
