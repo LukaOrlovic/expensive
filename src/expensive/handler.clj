@@ -14,7 +14,8 @@
             [cronj.core :as cronj]
             [migratus.core :as migratus]
             [expensive.routes.receipt :refer [receipt-routes]]
-            [expensive.routes.access :as access]))
+            [expensive.routes.access :as access]
+            [expensive.routes.statement :refer [statement-routes]]))
 
 (defroutes base-routes
   (route/resources "/")
@@ -85,7 +86,7 @@
 
 (def app (app-handler
            ;; add your application routes here
-           [home-routes receipt-routes base-routes]
+           [home-routes receipt-routes statement-routes base-routes]
            ;; add custom middleware here
            :middleware (load-middleware)
            :ring-defaults (mk-defaults false)

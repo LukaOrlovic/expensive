@@ -15,7 +15,8 @@
                  [prone "0.6.0"]
                  [com.novemberain/validateur "2.5.0"]
                  [yesql "0.5.3"]
-                 [crypto-password "0.2.0"]]
+                 [crypto-password "0.2.0"]
+                 [org.clojure/data.json "0.2.7"]]
 
   :repl-options {:init-ns expensive.repl}
   :jvm-opts ["-server"]
