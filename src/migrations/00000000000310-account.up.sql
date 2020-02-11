@@ -1,1 +1,0 @@
-insert into account (account_number, user_id, amount) values (1, 1, 1500.00),(2, 2, 2750.00),(3, 3, 13800.00),(4, 4, 152000.00);
