@@ -4,9 +4,11 @@
             [compojure.core :refer :all]
             [expensive.layout :as layout]
             [ring.util.response :as response]
-            [clj-time.coerce :as c]
+            [clj-time.core :as c]
             [noir.cookies :as cookies]
-            [clojure.data.json :as json]))
+            [clojure.data.json :as json]
+            [clj-time.coerce :as coerce]
+            [noir.session :as session]))
 
 (defqueries "expensive/models/statement.sql"
             {:connection db-spec})
@@ -29,3 +31,20 @@
   []
   (store-data-into-cookies)
   (layout/render "plot.html"))
+
+(defn get-receipts-statementid-from-db
+  [receipt]
+  (if (empty? (get-receipts-statement {
+                                       :year (c/year (coerce/to-local-date (receipt :date)))
+                                       :month (c/month (coerce/to-local-date (receipt :date)))
+                                       }))
+    (insert-statement! {
+                        :month (c/month (coerce/to-local-date (receipt :date)))
+                        :year (c/year (coerce/to-local-date (receipt :date)))
+                        :user_id (session/get :user_id)
+                        :amount (Double/parseDouble (receipt :amount))
+                        })
+    ((first (get-receipts-statement {
+                                     :year (c/year (coerce/to-local-date (receipt :date)))
+                                     :month (c/month (coerce/to-local-date (receipt :date)))
+                                     })) :statementid)))

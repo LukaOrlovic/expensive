@@ -6,7 +6,9 @@
             [ring.util.response :as response]
             [clj-time.coerce :as c]
             [expensive.validators.user-validator :as v]
-            [expensive.validators.receipt-validator :as r]))
+            [expensive.validators.receipt-validator :as r]
+            [noir.session :as session]
+            [expensive.models.statement-model :as statement]))
 
 (defqueries "expensive/models/receipt.sql"
             {:connection db-spec})
@@ -24,9 +26,10 @@
 (defn prepare-receipt-data-for-db
   [receipt]
   (-> receipt
+       (assoc :statementid (statement/get-receipts-statementid-from-db receipt))
        (assoc :amount (Double/parseDouble (receipt :amount)))
        (assoc :date (c/to-sql-date (receipt :date)))
-       (assoc :account_number (Double/parseDouble (receipt :account_number)))))
+       (assoc :user_id (session/get :user_id))))
 
 (defn insert-receipt
   [receipt]
@@ -34,7 +37,7 @@
     (if (empty? errors)
       (do
         (insert_receipt<! (prepare-receipt-data-for-db receipt))
-        (response/redirect "/receipt/get-all"))
+        (response/redirect "/receipt/all-receipts"))
       (layout/render "signup.html" (assoc receipt :errors errors)))))
 
 ;Logic for deleting a receipt from the db
@@ -61,6 +64,6 @@
         (update! { :receiptid (Integer/parseInt (receipt :receiptid))
                    :amount (Double/parseDouble (receipt :amount))
                    :date (c/to-sql-date (receipt :date))
-                   :account_number (Double/parseDouble (receipt :account_number))})
+                   :user_id (session/get :user_id)})
         (receipts-get-all))
       (layout/render "receipts/update-receipt.html" (assoc receipt :errors errors)))))

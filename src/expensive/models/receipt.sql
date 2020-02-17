@@ -1,6 +1,6 @@
 --name: insert_receipt<!
-INSERT INTO receipt (amount, date, account_number)
-VALUES (:amount, :date, :account_number);
+INSERT INTO receipt (amount, date, user_id, statementid)
+VALUES (:amount, :date, :user_id, :statementid);
 
 --name: get-all
 SELECT *
@@ -13,7 +13,7 @@ WHERE receiptid = :receiptid;
 
 --name: update!
 UPDATE receipt
-SET amount = :amount, date = :date, account_number = :account_number
+SET amount = :amount, date = :date, user_id = :user_id
 WHERE receiptid = :receiptid;
 
 --name: get-receipt

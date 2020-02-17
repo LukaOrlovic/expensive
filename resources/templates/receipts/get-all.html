@@ -7,7 +7,7 @@
         <th>Receipt ID</th>
         <th>Amount</th>
         <th>Date</th>
-        <th>Account number</th>
+        <th>User ID</th>
         <th>Delete receipt</th>
         <th>Update receipt</th>
     </tr>
@@ -18,7 +18,7 @@
         <td><a href="/receipt/get/{{r.receiptid}}">{{r.receiptid}}</a></td>
         <td><strong>{{ r.amount }}</strong></td>
         <td>{{ r.date }}</td>
-        <td>{{ r.account_number }}</td>
+        <td>{{ r.user_id }}</td>
         <td><a href="/receipt/delete/{{r.receiptid}}"><div>DELETE</div></a></td>
         <td><a href="/receipt/update/{{r.receiptid}}"><div>UPDATE</div></a></td>
     </tr>

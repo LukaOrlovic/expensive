@@ -140,3 +140,7 @@ table, th, td {
 td, th{
     text-align: center;
 }
+
+label{
+    font-size: 15px;
+}

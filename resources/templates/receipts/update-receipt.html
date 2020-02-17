@@ -1,6 +1,6 @@
 {% extends "templates/base.html" %}
 {% block content %}
-<h1>Add receipt:</h1>
+<h1>Update receipt:</h1>
 {% for a in r %}
 <div class="row">
     <div class="col-md-6">
@@ -21,14 +21,7 @@
                     {% endfor %}
                 </ul>
                 <input type="date" class="form-control" name="date" placeholder="{{a.date}}"></div>
-            <div class="form-group">
-                <label for="password">Select account:</label>
-                <ul class="errors">
-                    {% for e in errors.password %}
-                    <li>{{e}}</li>
-                    {% endfor %}
-                </ul>
-                <input type="number" class="form-control" name="account_number" placeholder="{{a.account_number}}"></div>
+            <div>Former date value was: {{a.date}}</div>
             <button type="submit" class="btn	btn-default">Submit</button>
         </form>
     </div>
