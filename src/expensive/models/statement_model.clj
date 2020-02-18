@@ -43,8 +43,8 @@
                         :year (c/year (coerce/to-local-date (receipt :date)))
                         :user_id (session/get :user_id)
                         :amount (Double/parseDouble (receipt :amount))
-                        })
-    ((first (get-receipts-statement {
-                                     :year (c/year (coerce/to-local-date (receipt :date)))
-                                     :month (c/month (coerce/to-local-date (receipt :date)))
-                                     })) :statementid)))
+                        }))
+  ((first (get-receipts-statement {
+                                   :year (c/year (coerce/to-local-date (receipt :date)))
+                                   :month (c/month (coerce/to-local-date (receipt :date)))
+                                   })) :statementid))
