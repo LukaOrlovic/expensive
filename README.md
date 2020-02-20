@@ -4,10 +4,20 @@ Expensive is an application that should help you to clearly see what is truly ex
 
 ## Prerequisites
 
-You will need [Leiningen 2.0] [1] or above installed and [Postgres 9.3.5] [2] installed.
+You will need [Leiningen 2.0] [9] or above installed and [Postgres 9.3.5] [10] installed.
 
 [1]: https://github.com/technomancy/leiningen
-[2]: https://www.postgresql.org/ftp/source/v9.3.5/
+[2]: https://github.com/weavejester/ring-server
+[3]: https://github.com/krisajenkins/yesql
+[4]: https://github.com/yogthos/migratus
+[5]: https://github.com/weavejester/crypto-password
+[6]: https://github.com/yogthos/Selmer
+[7]: https://github.com/clojure/data.json
+[8]: https://plot.ly/javascript/
+[9]: https://github.com/technomancy/leiningen
+[10]: https://www.postgresql.org/ftp/source/v9.3.5/
+[11]: https://www.amazon.com/Clojure-Brave-True-Ultimate-Programmer/dp/1593275919
+[12]: https://www.amazon.com/Clojure-Development-Essentials-Ryan-Baldwin/dp/1784392227
 
 ## Setup
 
@@ -34,22 +44,10 @@ You will need [Leiningen 2.0] [1] or above installed and [Postgres 9.3.5] [2] in
 * [__Data.json__] [7] : JSON parser/generator to/from Clojure data structures
 * [__Plotly__] [8] :  high-level, declarative charting library used in _Javascript_
 
-[1]: https://github.com/technomancy/leiningen
-[2]: https://github.com/weavejester/ring-server
-[3]: https://github.com/krisajenkins/yesql
-[4]: https://github.com/yogthos/migratus
-[5]: https://github.com/weavejester/crypto-password
-[6]: https://github.com/yogthos/Selmer
-[7]: https://github.com/clojure/data.json
-[8]: https://plot.ly/javascript/
     
 ##References
-  * [_Clojure for the brave and true_] [1]
+  * [_Clojure for the brave and true_] [11]
   
-  * [_Clojure Web Development Essentials_] [2]
+  * [_Clojure Web Development Essentials_] [12]
   
 ###### The project was developed as part of the assignment for the course Software Engineering Tools and Methodology at the Faculty of Organization Sciences, University of Belgrade, Serbia.
-  
-  [1]: https://www.amazon.com/Clojure-Brave-True-Ultimate-Programmer/dp/1593275919
-  [2]: https://www.amazon.com/Clojure-Development-Essentials-Ryan-Baldwin/dp/1784392227
-
