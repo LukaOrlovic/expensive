@@ -4,7 +4,7 @@ Expensive is an application that should help you to clearly see what is truly ex
 
 ## Prerequisites
 
-You will need [Leiningen] [9] 2.0 or above installed and [Postgres] [10] 9.3.5 installed.
+You will need [Leiningen][9] 2.0 or above installed and [Postgres][10] 9.3.5 installed.
 
 [1]: https://github.com/technomancy/leiningen
 [2]: https://github.com/weavejester/ring-server
@@ -35,19 +35,19 @@ You will need [Leiningen] [9] 2.0 or above installed and [Postgres] [10] 9.3.5 i
     
 ## Libraries
 
-* [Leiningen] [1] : dependency management library for building and configure Clojure project
-* [Ring-Server] [2] : library for starting a web server to serve a Ring handler with sensible default options and environment variable overrides
-* [YeSql] [3] : library which generates functions out of SQL, pulls sql files and turns queries into a function
-* [Migratus] [4] : library for database migration and schema management
-* [Crypto-password] [5] : library for securing user passwords
-* [Selmer] [6] : Django inspired template system for Clojure
-* [Data.json] [7] : JSON parser/generator to/from Clojure data structures
-* [Plotly] [8] :  high-level, declarative charting library used in _Javascript_
+* [Leiningen][1] : dependency management library for building and configure Clojure project
+* [Ring-Server][2] : library for starting a web server to serve a Ring handler with sensible default options and environment variable overrides
+* [YeSql][3] : library which generates functions out of SQL, pulls sql files and turns queries into a function
+* [Migratus][4] : library for database migration and schema management
+* [Crypto-password][5] : library for securing user passwords
+* [Selmer][6] : Django inspired template system for Clojure
+* [Data.json][7] : JSON parser/generator to/from Clojure data structures
+* [Plotly][8] :  high-level, declarative charting library used in _Javascript_
 
     
 ##References
-  * [Clojure for the brave and true] [11]
+  * [Clojure for the brave and true][11]
   
-  * [Clojure Web Development Essentials] [12]
+  * [Clojure Web Development Essentials][12]
   
 ###### The project was developed as part of the assignment for the course Software Engineering Tools and Methodology at the Faculty of Organization Sciences, University of Belgrade, Serbia.
