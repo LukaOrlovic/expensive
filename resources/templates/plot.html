@@ -8,9 +8,14 @@
 	    var months = [];
 	    var amounts = [];
 	    statements.forEach(function(s){
-	        months.push(s.month);
+	        if(s.month.toString().length === 1){
+	            months.push(s.year + '-' + '0' + s.month + '-' + '01');
+	        }else{
+	            months.push(s.year + '-' + s.month + '-' + '01');
+	        }
 	        amounts.push(s.amount);
 	    });
+	    layout.xaxis.type = 'date';
 	    Plotly.plot( TESTER, [{
 	        x: months,
 	        y: amounts }], layout );

@@ -36,3 +36,7 @@ var getCookie = function(cname) {
   }
   return "";
 }
+
+var deleteAllCookies = function(){
+    document.cookie = undefined;
+}

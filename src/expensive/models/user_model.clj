@@ -2,6 +2,7 @@
   (:require [yesql.core :refer [defqueries]]
             [crypto.password.bcrypt :as password]
             [expensive.models.connection :refer [db-spec]]
+            [noir.session :as session]
             [noir.session :as session]))
 
 (defqueries "expensive/models/users.sql"
@@ -26,3 +27,7 @@
     (when (password/check password (:password user))
       (session/put! :user_id (:user_id user))
       (dissoc user :password))))
+
+(defn logout
+  []
+  (session/clear!))

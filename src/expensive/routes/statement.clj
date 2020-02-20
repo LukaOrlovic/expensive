@@ -5,4 +5,6 @@
             [noir.util.route :refer [restricted]]))
 
 (defroutes statement-routes
-           (GET "/statement/all-statements" [] (statement/statement-get-all)))
+           (GET "/statement/all-statements" [] (restricted (statement/statement-get-all)))
+           (GET "/statement/view-statements" [] (restricted (statement/choose-statement-dates)))
+           (POST "/statement/view-statements" [& form] (statement/view-chosen-statements form)))

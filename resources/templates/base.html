@@ -12,16 +12,21 @@
     <div class="navbar navbar-inverse navbar-fixed-top">
       <div class="container">
         <div class="navbar-header">
-          <a class="navbar-brand" href="{{servlet-context}}/" style="font-size: x-large;margin-top: -4px;">expensive</a>
+          <a class="navbar-brand" style="font-size: x-large;margin-top: -4px;">expensive</a>
         </div>
         <div class="navbar-collapse collapse ">
           <ul class="nav navbar-nav">
-            <li class="{{home-selected}}"><a href="{{servlet-context}}/" style="font-weight: bold;font-size: larger;">Home</a></li>
+            {% if not is-authed? %}
+            <li class="{{home-selected}}"><a href="{{servlet-context}}/" style="font-weight: bold;font-size: larger;">Login</a></li>
+            {% endif %}
             <li class="{{about-selected}}"><a href="{{servlet-context}}/about" style="font-weight: bold;font-size: larger;">About</a></li>
-            <li class="{{plot-selected}}" id="plot"><a href="{{servlet-context}}/plot" style="font-weight: bold;font-size: larger;">Plot</a></li>
-            <li class="{{receipt-selected}}" id="all-receipts"><a href="{{servlet-context}}/receipt/all-receipts" style="font-weight: bold;font-size: larger;">Receipts</a></li>
+            <li class="{{receipt-selected}}" id="all-receipts"><a href="{{servlet-context}}/receipt/all-receipts" style="font-weight: bold;font-size: larger;">All receipts</a></li>
             <li class="{{insertreceipt-selected}}" id="insert-receipt"><a href="{{servlet-context}}/receipt/insert-receipt" style="font-weight: bold;font-size: larger;">Insert receipt</a></li>
-            <li class="{{allstatements-selected}}" id="all-statements"><a href="{{servlet-context}}/statement/all-statements" style="font-weight: bold;font-size: larger;">All statements</a></li>
+            <li class="{{allstatements-selected}}" id="all-statements"><a href="{{servlet-context}}/statement/all-statements" style="font-weight: bold;font-size: larger;">All my statements</a></li>
+            <li class="{{allstatements-selected}}" id="view-statements"><a href="{{servlet-context}}/statement/view-statements" style="font-weight: bold;font-size: larger;">Choose statements period</a></li>
+            {% if is-authed? %}
+            <li class="{{home-not-selected}}"><a href="{{servlet-context}}/logout" style="font-weight: bold;font-size: larger;">Logout</a></li>
+            {% endif %}
           </ul>
         </div>
       </div>
@@ -48,6 +53,9 @@
         if(selectedTab.includes('statement/all-statements')){
           document.getElementById('all-statements').classList.add('active');
           document.getElementById('plot').classList.remove('active');
+        };
+        if(selectedTab.includes('statement/view-statements')){
+          document.getElementById('view-statements').classList.add('active');
         };
       }();
     </script>

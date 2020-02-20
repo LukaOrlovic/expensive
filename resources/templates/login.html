@@ -5,18 +5,18 @@
 <div class="row">
     <div class="col-md-6">
         {% if invalid-credentials? %}
-        <p class="errors">The provided username and/or password are
+        <p class="errors" style="margin-left: 340px; font-size: 16px; width: 100%;">The provided username and/or password are
             incorrect.
         </p>
         {% endif %}
         <form role="form" method="POST" action="/login" style="text-align: center;">
             <div class="form-group">
-                <label for="username" style="margin-left: 16%;">Username</label>
+                <label for="username" style="margin-left: 20%;">Username</label>
                 <input type="text" name="username"
                        class="form-control" id="username" style="margin-left: 53%;">
             </div>
             <div class="form-group">
-                <label for="password" style="margin-left: 16%;">Password</label>
+                <label for="password" style="margin-left: 20%;">Password</label>
                 <input type="password" name="password"
                        class="form-control" id="password" style="margin-left: 53%;">
             </div>

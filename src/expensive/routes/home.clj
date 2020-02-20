@@ -39,21 +39,17 @@
   []
   (layout/render "about.html"))
 
-(defn plot-something
+(defn logout
   []
-  (cookies/put! "January" 100000)
-  (cookies/put! "February" 250000)
-  (cookies/put! "March" 88000)
-  (cookies/put! "April" 92300)
-  (cookies/put! "May" 158000)
-  (layout/render "plot.html"))
+  (user_model/logout)
+  (response/redirect "/"))
 
 (defroutes home-routes
   (GET "/" [] (home-page))
   (GET "/about" [] (about-page))
   (GET "/signup" [] (signup-page))
   (POST "/signup" [& form] (signup-page-submit form))
-  (GET "/signup-success" [] "Success!")
-  (GET "/plot" [] (plot-something))
+  (GET "/signup-success" [] (about-page))
   (GET "/login" [] (login-page))
-  (POST "/login" [& login-form] (login-page login-form)))
+  (POST "/login" [& login-form] (login-page login-form))
+  (ANY "/logout" [] (logout)))

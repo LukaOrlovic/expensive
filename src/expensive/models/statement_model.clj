@@ -29,8 +29,11 @@
 ;Logic for getting all statements from the db
 (defn statement-get-all
   []
-  (store-data-into-cookies)
-  (layout/render "plot.html"))
+  (if (empty? (get-all))
+    (layout/render "about.html")
+    (do
+      (store-data-into-cookies)
+      (layout/render "plot.html"))))
 
 (defn get-receipts-statementid-from-db
   [receipt]
@@ -48,3 +51,27 @@
                                    :year (c/year (coerce/to-local-date (receipt :date)))
                                    :month (c/month (coerce/to-local-date (receipt :date)))
                                    })) :statementid))
+
+(defn view-chosen-statements
+  [get-statements-data]
+  (if (empty? (get-selected-statements {
+                                        :starting_month (Integer/parseInt (get-statements-data :starting_month))
+                                        :starting_year (Integer/parseInt (get-statements-data :starting_year))
+                                        :ending_month (Integer/parseInt (get-statements-data :ending_month))
+                                        :ending_year (Integer/parseInt (get-statements-data :ending_year))
+                                        :user_id (session/get :user_id)
+                                        }))
+    (layout/render "about.html")
+    (do
+      (doall (cookies/put! "statement" (json/write-str (get-selected-statements {
+                                                                                 :starting_month (Integer/parseInt (get-statements-data :starting_month))
+                                                                                 :starting_year (Integer/parseInt (get-statements-data :starting_year))
+                                                                                 :ending_month (Integer/parseInt (get-statements-data :ending_month))
+                                                                                 :ending_year (Integer/parseInt (get-statements-data :ending_year))
+                                                                                 :user_id (session/get :user_id)
+                                                                                 }))))
+      (layout/render "plot.html"))))
+
+(defn choose-statement-dates
+  []
+  (layout/render "statements/statement-period.html"))
