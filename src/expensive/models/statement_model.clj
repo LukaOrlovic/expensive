@@ -30,7 +30,7 @@
 (defn statement-get-all
   []
   (if (empty? (get-all))
-    (layout/render "about.html")
+    (layout/render "statements/empty-statement-list.html")
     (do
       (store-data-into-cookies)
       (layout/render "plot.html"))))
@@ -61,7 +61,7 @@
                                         :ending_year (Integer/parseInt (get-statements-data :ending_year))
                                         :user_id (session/get :user_id)
                                         }))
-    (layout/render "about.html")
+    (layout/render "statements/empty-statement-list.html")
     (do
       (doall (cookies/put! "statement" (json/write-str (get-selected-statements {
                                                                                  :starting_month (Integer/parseInt (get-statements-data :starting_month))
